@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Patient</title>
+</head>
+<body>
+    <form th:action="@{'/new'}" method="post" th:object="${newPatient}">
+        <input type="text" placeholder="Name" th:field="*{patientName}"/><br/>
+        <input type="text" placeholder="Age" th:field="*{patientAge}"/><br/>
+        <input type="text" placeholder="Id" th:field="*{patientId}"/><br/>
+        <input type="text" placeholder="Weight" th:field="*{patientWeight}"/><br/>
+        <input type="text" placeholder="Height" th:field="*{patientHeight}"/><br/>
+        <input type="submit" value="Register" /><br/>
+    </form>
+</body>
+</html>
